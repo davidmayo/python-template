@@ -1,0 +1,39 @@
+[project]
+name = "{{module_name}}"
+version = "0.0.0"
+description = ""
+readme = "README.md"
+authors = [
+    { name = "David Mayo", email = "dcmayo@gmail.com" }
+]
+requires-python = ">={{python_version}}"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.8.13,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 320   # This is the biggest number Ruff will accept.
+
+[tool.ruff.lint]
+ignore = [
+    "F541", # f-string without any placeholders
+    "E501", # line too long
+]
+
+extend-select = [
+    "I001",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+]
