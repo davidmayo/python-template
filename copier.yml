@@ -21,6 +21,11 @@ user_email:
   # help: What is the author's email address?
   when: false
 
+author_name:
+  type: str
+  help: Who is the project's author?
+  default: "{{ user_name or 'Didnt Work' }}"
+
 _tasks:
   - command: ["uv", "sync"]
     working_directory: "{{project_name}}"
