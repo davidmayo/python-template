@@ -11,6 +11,16 @@ python_version:
   type: str
   help: Which minimum Python version will you use?
 
+project_author:
+  type: str
+  help: Who is the project's author?
+  default: "{{ user_name or None }}"
+
+project_author_email:
+  type: str
+  help: What is the author's email address?
+  default: "{{ user_email or None }}"
+
 _tasks:
   - command: ["uv", "sync"]
     working_directory: "{{project_name}}"
