@@ -13,13 +13,11 @@ python_version:
 
 user_name:
   type: str
-  # help: Who is the project's author?
-  when: false
+  # when: false
 
 user_email:
   type: str
-  # help: What is the author's email address?
-  when: false
+  # when: false
 
 author_name:
   type: str
