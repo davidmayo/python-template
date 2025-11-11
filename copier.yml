@@ -10,3 +10,16 @@ module_name:
 python_version:
   type: str
   help: Which minimum Python version will you use?
+
+_tasks:
+  - command: ["uv", "sync"]
+    working_directory: "{{project_name}}"
+
+  - command: ["git", "init"]
+    working_directory: "{{project_name}}"
+  - command: ["git", "checkout", "-b", "main"]
+    working_directory: "{{project_name}}"
+  - command: ["git", "add", "-A"]
+    working_directory: "{{project_name}}"
+  - command: ["git", "commit", "-m", "Initial scaffolding commit"]
+    working_directory: "{{project_name}}"
