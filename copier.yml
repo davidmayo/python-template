@@ -19,22 +19,22 @@ author_name:
 author_email_choice:
   type: str
   help: What is the author's email?
-  default: "dcmayo@gmail.com"
+  default: "dcmayo@moreheadstate.edu"
   choices:
     - "dcmayo@moreheadstate.edu"
     - "dcmayo@gmail.com"
-    - "Other"
+    - "<Other>"
 
 author_email_other:
   type: str
   help: Please provide the author's email.
-  when: "{{ author_email_choice == 'Other' }}"
+  when: "{{ author_email_choice == '<Other>' }}"
   default: ""
 
 author_email:
   type: str
   when: false
-  default: "{{ author_email_choice if author_email_choice != 'Other' else author_email_other }}"
+  default: "{{ author_email_choice if author_email_choice != '<Other>' else author_email_other }}"
 
 _tasks:
   - command: ["uv", "sync"]
