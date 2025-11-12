@@ -28,3 +28,8 @@ To just copy the files, but don't run any of the follow-up commands, run
 ```bash
 uvx copier copy gh:davidmayo/python-template . --skip-tasks
 ```
+
+## CHANGELOG
+
+0.1.0 - 2025-11-11
+First version. Sorta works.
