@@ -52,3 +52,10 @@ _tasks:
 
   - command: ["rm", ".copier-answers.yml"]
     working_directory: "{{project_name}}"
+
+  - command: ["rm", ".copier-answers.yml"]
+    working_directory: "{{project_name}}"
+    when: "{{ _copier_conf.os in  ['linux', 'macos'] }}"
+  - command: ["Remove-Item", ".copier-answers.yml"]
+    working_directory: "{{project_name}}"
+    when: "{{ _copier_conf.os == 'windows' }}"
