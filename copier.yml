@@ -70,5 +70,5 @@ _tasks:
   - command: ["uv", "run", "pre-commit", "install"]
     working_directory: "{{project_name}}"
 
-  - command: ["uv", "run", "pre-commit", "run"]
+  - command: ["uv", "run", "pre-commit", "run", "--all-files"]
     working_directory: "{{project_name}}"
