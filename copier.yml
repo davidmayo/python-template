@@ -11,13 +11,13 @@ python_version:
   type: str
   help: Which minimum Python version will you use?
 
-user_name:
-  type: str
-  # when: false
+# user_name:
+#   type: str
+#   # when: false
 
-user_email:
-  type: str
-  # when: false
+# user_email:
+#   type: str
+#   # when: false
 
 author_name:
   type: str
