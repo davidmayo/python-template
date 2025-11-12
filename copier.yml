@@ -10,6 +10,7 @@ module_name:
 python_version:
   type: str
   help: Which minimum Python version will you use?
+  default: "3.10"
 
 author_name:
   type: str
@@ -47,4 +48,7 @@ _tasks:
   - command: ["git", "add", "-A"]
     working_directory: "{{project_name}}"
   - command: ["git", "commit", "-m", "Initial scaffolding commit"]
+    working_directory: "{{project_name}}"
+
+  - command: ["rm", ".copier-answers.yml"]
     working_directory: "{{project_name}}"
