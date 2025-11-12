@@ -63,3 +63,9 @@ _tasks:
       - -Command
       - "Remove-Item -LiteralPath {{ _copier_conf.answers_file }} -ErrorAction SilentlyContinue"
     when: "{{ _copier_conf.os == 'windows' }}"
+
+  # - command: ["uv", "install-dev-deps"]
+  #   working_directory: "{{project_name}}"
+
+  - command: ["uv", "run", "pre-commit", "install"]
+    working_directory: "{{project_name}}"

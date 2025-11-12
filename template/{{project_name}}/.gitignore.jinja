@@ -9,6 +9,14 @@ untracked/*
 !untracked/.gitignore
 !untracked/README.md
 
+# Ignore VSCode code-workspace files
+# (But keep other things, including **/.vscode/settings.json and **/.vscode/launch.json)
+**/.vscode/*.code-workspace
+
+# Less controversial stuff
+**/.ruff_cache
+**/.pytest_cache
+
 ################################################################
 #   
 #   END: David Mayo opinionated .gitignore                                
