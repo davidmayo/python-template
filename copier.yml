@@ -1,6 +1,3 @@
-_exclude:
-  - README.md
-
 project_name:
   type: str
   help: What is the project's name?
