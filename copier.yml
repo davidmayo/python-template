@@ -55,14 +55,14 @@ _tasks:
   # - command: ["rm", ".copier-answers.yml"]
   #   working_directory: "{{project_name}}"
 
-  - command: ["rm", "-f", ".copier-answers.yml"]
-    when: "{{ _copier_conf.os in  ['linux', 'macos'] }}"
-  - command:
-      - powershell
-      - -NoProfile
-      - -Command
-      - "Remove-Item -LiteralPath {{ _copier_conf.answers_file }} -ErrorAction SilentlyContinue"
-    when: "{{ _copier_conf.os == 'windows' }}"
+  # - command: ["rm", "-f", ".copier-answers.yml"]
+  #   when: "{{ _copier_conf.os in  ['linux', 'macos'] }}"
+  # - command:
+  #     - powershell
+  #     - -NoProfile
+  #     - -Command
+  #     - "Remove-Item -LiteralPath {{ _copier_conf.answers_file }} -ErrorAction SilentlyContinue"
+  #   when: "{{ _copier_conf.os == 'windows' }}"
 
   # - command: ["uv", "install-dev-deps"]
   #   working_directory: "{{project_name}}"
