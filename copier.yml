@@ -22,7 +22,7 @@ user_email:
 author_name:
   type: str
   help: Who is the project's author?
-  default: "{{ user_name or 'Didnt Work' }}"
+  default: "{{ user_name if user_name is defined else _copier_conf.settings.defaults.get('user_name') }}"
 
 _tasks:
   - command: ["uv", "sync"]
