@@ -55,5 +55,9 @@ _tasks:
 
   - command: ["rm", "-f", ".copier-answers.yml"]
     when: "{{ _copier_conf.os in  ['linux', 'macos'] }}"
-  - command: ["Remove-Item", ".copier-answers.yml", "-ErrorAction", "SilentlyContinue"]
+  - command:
+      - powershell
+      - -NoProfile
+      - -Command
+      - "Remove-Item -LiteralPath {{ _copier_conf.answers_file }} -ErrorAction SilentlyContinue"
     when: "{{ _copier_conf.os == 'windows' }}"
