@@ -1,4 +1,4 @@
-_exlude:
+_exclude:
   - README.md
 
 project_name:
