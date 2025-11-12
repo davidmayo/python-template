@@ -20,8 +20,10 @@ To create a project structure, run `uv sync`, and do some git initialization, ru
 uvx copier copy gh:davidmayo/python-template . --trust
 ```
 
+Note that this will create a new folder inside of your PWD. So if you give a project name of `"my_project"`, the project will be created at `$PWD/my_project/`
+
 > [!WARNING]
-> Running that command `--trust` allows arbitrary code execution of scripts in this repo. You can see the scripts that will run by looking at [copier.yml](./copier.yaml) `_tasks` section. You can see that these are pretty innocuous commands, but caveat emptor.
+> Running that command `--trust` allows arbitrary code execution of scripts in this repo. You can see the scripts that will run by looking at [copier.yml](./copier.yml) `_tasks` section. You can see that these are pretty innocuous commands, but caveat emptor.
 
 To just copy the files, but don't run any of the follow-up commands, run
 
@@ -31,5 +33,8 @@ uvx copier copy gh:davidmayo/python-template . --skip-tasks
 
 ## CHANGELOG
 
-0.1.0 - 2025-11-11
+### 0.1.0 - 2025-11-11
 First version. Sorta works.
+
+### 0.1.1 - 2025-11-11
+README fixes
